@@ -94,8 +94,8 @@ public class SampleController implements Initializable
     private double []fréquences= {1.0,1000.0,1000000.0,1000000000.0};
     
     @FXML
-    private ObservableList<String> listÉnergies=FXCollections.observableArrayList("Joule","Kilojoule","Kilowattheure","Gramme de calories","Kilocalorie");
-    private double []énergies= {1.0,1000.0,3600000.0,4.184,4184.0};
+    private ObservableList<String> listÉnergies=FXCollections.observableArrayList("Joule","Kilojoule","Kilowattheure","Gramme de calories","Unité thermique britannique");
+    private double []énergies= {1.0,1000.0,3600000.0,4.184,1055.0};
     
     @FXML
     private ObservableList<String> listMasses=FXCollections.observableArrayList("Milligramme","Gramme","Kilogramme","Livre","Tonne");
