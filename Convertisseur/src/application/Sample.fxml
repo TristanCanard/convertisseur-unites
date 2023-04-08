@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Page d'acceuil">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Circle fill="#ffffff00" layoutX="592.0" layoutY="331.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="#ffffff00" layoutX="124.0" layoutY="324.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                        <CubicCurve controlX1="-50.0" controlX2="50.0" controlY1="-100.0" controlY2="100.0" endX="150.0" fill="#ffffff00" layoutX="356.0" layoutY="294.0" startX="-150.0" stroke="BLACK" />
+                        <Text layoutX="118.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertisseur d'unités" textAlignment="CENTER" wrappingWidth="463.75390625">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="40.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="158.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliquez sur un onglet pour commencer.">
+                           <font>
+                              <Font name="Arial" size="22.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="67.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joule" />
+                        <Text layoutX="66.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Octet" />
+                        <Text layoutX="137.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hertz" />
+                        <Text layoutX="546.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kilojoule" />
+                        <Text layoutX="540.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gigaoctet" />
+                        <Text layoutX="572.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mégahertz" />
+                        <Button layoutX="617.0" layoutY="6.0" mnemonicParsing="false" onAction="#quitter" prefHeight="27.0" prefWidth="75.0" text="Quitter">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Stockage">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="ScboBox2" layoutX="360.0" layoutY="196.0" onAction="#ConvertS2" prefHeight="51.0" prefWidth="171.0" promptText="Choisir" />
+                        <TextField fx:id="StxtField1" layoutX="163.0" layoutY="110.0" onKeyReleased="#ConvertS1" onKeyTyped="#verifNum" prefHeight="64.0" prefWidth="171.0" promptText="Écrivez içi" />
+                        <TextField fx:id="StxtField2" layoutX="360.0" layoutY="110.0" onKeyReleased="#ConvertS2" onKeyTyped="#verifNum" prefHeight="64.0" prefWidth="171.0" promptText="Écrivez içi" />
+                        <ComboBox fx:id="ScboBox1" layoutX="163.0" layoutY="196.0" onAction="#ConvertS1" prefHeight="51.0" prefWidth="171.0" promptText="Choisir" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Volume">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="VcboBox1" layoutX="164.0" layoutY="196.0" onAction="#ConvertV1" prefHeight="51.0" prefWidth="171.0" promptText="Choisir" />
+                        <TextField fx:id="VtxtField2" layoutX="365.0" layoutY="108.0" onKeyReleased="#ConvertV2" onKeyTyped="#verifNum" prefHeight="64.0" prefWidth="171.0" promptText="Écrivez içi" />
+                        <TextField fx:id="VtxtField1" layoutX="164.0" layoutY="108.0" onKeyReleased="#ConvertV1" onKeyTyped="#verifNum" prefHeight="64.0" prefWidth="171.0" promptText="Écrivez içi" />
+                        <ComboBox fx:id="VcboBox2" layoutX="365.0" layoutY="196.0" onAction="#ConvertV2" prefHeight="51.0" prefWidth="171.0" promptText="Choisir" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Fréquence">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="FtxtField1" layoutX="170.0" layoutY="103.0" onKeyReleased="#ConvertF1" onKeyTyped="#verifNum" prefHeight="64.0" prefWidth="171.0" promptText="Écrivez içi" />
+                        <TextField fx:id="FtxtField2" layoutX="363.0" layoutY="103.0" onKeyReleased="#ConvertF2" onKeyTyped="#verifNum" prefHeight="64.0" prefWidth="171.0" promptText="Écrivez içi" />
+                        <ComboBox fx:id="FcboBox1" layoutX="170.0" layoutY="196.0" onAction="#ConvertF1" prefHeight="51.0" prefWidth="171.0" promptText="Choisir" />
+                        <ComboBox fx:id="FcboBox2" layoutX="363.0" layoutY="196.0" onAction="#ConvertF2" prefHeight="51.0" prefWidth="171.0" promptText="Choisir" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Énergie">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="EtxtField1" layoutX="166.0" layoutY="103.0" onKeyReleased="#ConvertE1" onKeyTyped="#verifNum" prefHeight="64.0" prefWidth="171.0" promptText="Écrivez içi" />
+                        <TextField fx:id="EtxtField2" layoutX="367.0" layoutY="103.0" onKeyReleased="#ConvertE2" onKeyTyped="#verifNum" prefHeight="64.0" prefWidth="171.0" promptText="Écrivez içi" />
+                        <ComboBox fx:id="EcboBox1" layoutX="166.0" layoutY="196.0" onAction="#ConvertE1" prefHeight="51.0" prefWidth="171.0" promptText="Choisir" />
+                        <ComboBox fx:id="EcboBox2" layoutX="367.0" layoutY="196.0" onAction="#ConvertE2" prefHeight="51.0" prefWidth="171.0" promptText="Choisir" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Masse">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="MtxtField1" layoutX="168.0" layoutY="106.0" onKeyReleased="#ConvertM1" onKeyTyped="#verifNum" prefHeight="64.0" prefWidth="171.0" promptText="Écrivez içi" />
+                        <ComboBox fx:id="McboBox1" layoutX="168.0" layoutY="196.0" onAction="#ConvertM1" prefHeight="51.0" prefWidth="171.0" promptText="Choisir" />
+                        <TextField fx:id="MtxtField2" layoutX="369.0" layoutY="106.0" onKeyReleased="#ConvertM2" onKeyTyped="#verifNum" prefHeight="64.0" prefWidth="171.0" promptText="Écrivez içi" />
+                        <ComboBox fx:id="McboBox2" layoutX="369.0" layoutY="196.0" onAction="#ConvertM2" prefHeight="51.0" prefWidth="171.0" promptText="Choisir" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Sur moi">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="76.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le créateur de ce programme est un élève à la Toronto French School. La raison du choix des unités utilisées est qu'elles ont été utiles pour les classes de science et de programmation." textAlignment="JUSTIFY" wrappingWidth="548.625">
+                           <font>
+                              <Font name="Arial" size="22.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="154.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sur le programmeur">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="40.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
